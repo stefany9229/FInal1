@@ -6,7 +6,7 @@ spring:
       version: 4.0.2
   data:
     mongodb:
-      database: test1
+      database: catalogoDB
       port: 27017
 
 
