@@ -1,11 +1,22 @@
 -------------------------------------------------------------------------------
 Test set: com.dh.movieservice.MovieServiceApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 14.358 s <<< FAILURE! - in com.dh.movieservice.MovieServiceApplicationTests
-contextLoads  Time elapsed: 0.003 s  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 18.29 s <<< FAILURE! - in com.dh.movieservice.MovieServiceApplicationTests
+contextLoads  Time elapsed: 0.002 s  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.loadBalancerClientFactory
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44]
-Caused by: java.lang.NoClassDefFoundError: org/springframework/beans/factory/aot/BeanRegistrationAotProcessor
-Caused by: java.lang.ClassNotFoundException: org.springframework.beans.factory.aot.BeanRegistrationAotProcessor
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'compositeCompatibilityVerifier' defined in class path resource [org/springframework/cloud/configuration/CompatibilityVerifierAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.configuration.CompositeCompatibilityVerifier]: Factory method 'compositeCompatibilityVerifier' threw exception; nested exception is org.springframework.cloud.configuration.CompatibilityNotMetException: Spring Cloud/ Spring Boot version compatibility checks have failed: [[VerificationResult@1ee5792a description = 'Spring Boot [2.7.4] is not compatible with this Spring Cloud release train', action = 'Change Spring Boot version to one of the following versions [2.6.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]']]
+Caused by: org.springframework.beans.BeanInstantiationException: 
+Failed to instantiate [org.springframework.cloud.configuration.CompositeCompatibilityVerifier]: Factory method 'compositeCompatibilityVerifier' threw exception; nested exception is org.springframework.cloud.configuration.CompatibilityNotMetException: Spring Cloud/ Spring Boot version compatibility checks have failed: [[VerificationResult@1ee5792a description = 'Spring Boot [2.7.4] is not compatible with this Spring Cloud release train', action = 'Change Spring Boot version to one of the following versions [2.6.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]']]
+Caused by: org.springframework.cloud.configuration.CompatibilityNotMetException: 
+Spring Cloud/ Spring Boot version compatibility checks have failed: [[VerificationResult@1ee5792a description = 'Spring Boot [2.7.4] is not compatible with this Spring Cloud release train', action = 'Change Spring Boot version to one of the following versions [2.6.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]']]
 

@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @Value("${message}")
-    private String message;
+   // @Value("${message}")
+    private String message="Hola";
 
     @RequestMapping("/message")
     ResponseEntity<String> getMessage() {
