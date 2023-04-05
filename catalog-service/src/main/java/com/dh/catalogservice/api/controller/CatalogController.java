@@ -3,6 +3,7 @@ package com.dh.catalogservice.api.controller;
 import com.dh.catalogservice.api.client.IMoviesServiceClient;
 import com.dh.catalogservice.api.client.ISeriesServiceClient;
 import com.dh.catalogservice.api.service.CatalogService;
+import com.dh.catalogservice.domain.model.IProduct;
 import com.dh.catalogservice.domain.model.Movie;
 import com.dh.catalogservice.domain.model.Serie;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +25,8 @@ public class CatalogController {
     @Autowired
     private ISeriesServiceClient iSeriesServiceClient;
 
-
-
+    @Autowired
+    private CatalogService catalogService;
 
 
     @GetMapping("/movies/{genre}")
@@ -38,6 +39,12 @@ public class CatalogController {
     ResponseEntity<List<Serie>> getSerieGenre(@PathVariable String genre) {
 
         return ResponseEntity.ok().body(iSeriesServiceClient.getSerieByGenre(genre));
+    }
+
+    @GetMapping("/todo/{genre}")
+    ResponseEntity<List<IProduct>> getAllGenre(@PathVariable String genre) {
+
+        return ResponseEntity.ok().body(catalogService.listarPorGenero(genre));
     }
 
 }

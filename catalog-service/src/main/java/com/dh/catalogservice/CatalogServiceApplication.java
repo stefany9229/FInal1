@@ -10,7 +10,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.ApplicationContext;
 
 import java.util.ArrayList;
@@ -26,7 +25,7 @@ public class CatalogServiceApplication {
 
 
         ApplicationContext context=SpringApplication.run(CatalogServiceApplication.class, args);
-
+ /*
        List<Movie> movies =  context.getBean(IMovieRepository.class).findAllByGenre("terror");
         List<Serie> series =  context.getBean(ISerieRepository.class).findAllByGenre("terror");
 
@@ -40,6 +39,7 @@ public class CatalogServiceApplication {
             productList.add((IProduct) serie);
         }
         System.out.println(productList);
+        */
     }
 
 }
