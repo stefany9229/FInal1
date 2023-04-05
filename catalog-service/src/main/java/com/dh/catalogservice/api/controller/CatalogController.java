@@ -28,7 +28,7 @@ public class CatalogController {
     @Autowired
     private CatalogService catalogService;
 
-
+ /*
     @GetMapping("/movies/{genre}")
     ResponseEntity<List<Movie>> getMovieGenre(@PathVariable String genre) {
 
@@ -40,11 +40,19 @@ public class CatalogController {
 
         return ResponseEntity.ok().body(iSeriesServiceClient.getSerieByGenre(genre));
     }
+    */
+  
 
     @GetMapping("/todo/{genre}")
     ResponseEntity<List<IProduct>> getAllGenre(@PathVariable String genre) {
 
-        return ResponseEntity.ok().body(catalogService.listarPorGenero(genre));
+        return ResponseEntity.ok().body(catalogService.listarPorGeneroOffLine(genre));
+    }
+
+    @GetMapping("/todoOnline/{genre}")
+    ResponseEntity<List<IProduct>> getAllGenreOnline(@PathVariable String genre) {
+
+        return ResponseEntity.ok().body(catalogService.listarPorGeneroOffLine(genre));
     }
 
 }
