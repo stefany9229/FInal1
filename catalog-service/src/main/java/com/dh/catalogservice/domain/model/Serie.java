@@ -16,13 +16,23 @@ import java.util.List;
 @NoArgsConstructor
 @Setter
 @Getter
-public class Serie {
+public class Serie implements IProduct{
 
     @Id
     private String id;
     private String name;
     private String genre;
     private List<Season> seasons = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "Serie{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", genre='" + genre + '\'' +
+                ", seasons=" + seasons +
+                '}';
+    }
 
     @AllArgsConstructor
     @NoArgsConstructor
@@ -33,15 +43,17 @@ public class Serie {
         private Integer seasonNumber;
         private List<Chapter> chapters = new ArrayList<>();
 
+
         @AllArgsConstructor
         @NoArgsConstructor
         @Setter
         @Getter
-        public static class Chapter {
+        public static class Chapter implements IProduct{
 
             private String name;
             private Integer number;
             private String urlStream;
+
 
 
         }

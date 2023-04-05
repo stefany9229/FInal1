@@ -9,7 +9,7 @@ import java.util.List;
 
 
 
-@Repository
+
 public interface IMovieRepository extends MongoRepository<Movie, Long> {
     List<Movie> findAllByGenre(String genre);
 

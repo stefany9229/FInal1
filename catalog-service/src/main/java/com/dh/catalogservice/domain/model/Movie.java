@@ -14,10 +14,20 @@ import org.springframework.data.mongodb.core.mapping.Document;
     @Setter
     @Getter
 
-    public class Movie{
+    public class Movie implements IProduct{
             @Id
             private Long id;
             private String name;
             private String genre;
             private String urlStream;
+
+        @Override
+        public String toString() {
+            return "Movie{" +
+                    "id=" + id +
+                    ", name='" + name + '\'' +
+                    ", genre='" + genre + '\'' +
+                    ", urlStream='" + urlStream + '\'' +
+                    '}';
+        }
     }
