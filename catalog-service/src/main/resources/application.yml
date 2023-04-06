@@ -28,3 +28,27 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      subscription:
+        allowHealthIndicatorToFail: false
+        registerHealthIndicator: true
+        slidingWindowType: TIME_BASED
+        minimumNumberOfCalls: 7
+        slidingWindowSize: 8
+        waitDurationInOpenState: 15s
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        eventConsumerBufferSize: 1
+  retry:
+    instances:
+      subscription:
+        maxAttempts: 1
+        waitDuration: 1000
+        retryExceptions:
+          - feign.FeignException$InternalServerError
+
+

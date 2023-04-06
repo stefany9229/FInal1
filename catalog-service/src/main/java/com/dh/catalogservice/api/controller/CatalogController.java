@@ -42,12 +42,16 @@ public class CatalogController {
     }
 
 */
-
+/*
     @GetMapping("/todo/{genre}")
     ResponseEntity<List<IProduct>> getAllGenre(@PathVariable String genre) {
 
         return ResponseEntity.ok().body(catalogService.listarPorGeneroOffLine(genre));
     }
+
+    */
+
+
 
     @GetMapping("/todoOnline/{genre}")
     ResponseEntity<List<IProduct>> getAllGenreOnline(@PathVariable String genre) {
