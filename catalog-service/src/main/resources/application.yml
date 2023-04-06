@@ -33,7 +33,7 @@ eureka:
 resilience4j:
   circuitbreaker:
     instances:
-      subscription:
+      OnLine:
         allowHealthIndicatorToFail: false
         registerHealthIndicator: true
         slidingWindowType: TIME_BASED
@@ -45,7 +45,7 @@ resilience4j:
         eventConsumerBufferSize: 1
   retry:
     instances:
-      subscription:
+      OnLine:
         maxAttempts: 1
         waitDuration: 1000
         retryExceptions:

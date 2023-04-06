@@ -41,8 +41,8 @@ public class CatalogService implements ICatalogService {
         this.iMoviesServiceClient = iMoviesServiceClient;
         this.iSeriesServiceClient = iSeriesServiceClient;
     }
-    @CircuitBreaker(name="subscription",fallbackMethod = "subsciptionFallbackMethod")
-    @Retry(name = "subscription")
+    @CircuitBreaker(name="OnLine",fallbackMethod = "listarPorGeneroOffLine")
+    @Retry(name = "OnLine")
     public List<IProduct> listarPorGeneroOnLine(String genre) {
         List<Movie> movies = iMoviesServiceClient.getMovieByGenre(genre);
         List<Serie> series = iSeriesServiceClient.getSerieByGenre(genre);
@@ -58,7 +58,7 @@ public class CatalogService implements ICatalogService {
         return productList;
     }
 
-    public List<IProduct> subsciptionFallbackMethod(String genre,CallNotPermittedException exception) {
+    public List<IProduct> listarPorGeneroOffLine(String genre,CallNotPermittedException exception) {
         List<Movie> movies = movieRepository.findAllByGenre(genre);
         List<Serie> series = serieRepository.findAllByGenre(genre);
         List<IProduct> productList = new ArrayList<IProduct>();
