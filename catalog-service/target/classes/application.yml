@@ -37,7 +37,7 @@ resilience4j:
         allowHealthIndicatorToFail: false
         registerHealthIndicator: true
         slidingWindowType: TIME_BASED
-        minimumNumberOfCalls: 7
+        minimumNumberOfCalls: 4
         slidingWindowSize: 8
         waitDurationInOpenState: 15s
         permittedNumberOfCallsInHalfOpenState: 3

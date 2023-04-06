@@ -58,7 +58,7 @@ public class CatalogService implements ICatalogService {
         return productList;
     }
 
-    public List<IProduct> listarPorGeneroOffLine(String genre) {
+    public List<IProduct> subsciptionFallbackMethod(String genre,CallNotPermittedException exception) {
         List<Movie> movies = movieRepository.findAllByGenre(genre);
         List<Serie> series = serieRepository.findAllByGenre(genre);
         List<IProduct> productList = new ArrayList<IProduct>();
@@ -73,9 +73,9 @@ public class CatalogService implements ICatalogService {
         return productList;
     }
 
-    private List<IProduct> subsciptionFallbackMethod(CallNotPermittedException exception){
+    /*private List<IProduct> subsciptionFallbackMethod(CallNotPermittedException exception){
         return  null;
-    }
+    }*/
 
 
 }
