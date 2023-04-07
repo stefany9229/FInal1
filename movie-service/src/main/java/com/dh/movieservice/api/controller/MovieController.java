@@ -33,13 +33,17 @@ public class MovieController {
 
     @PostMapping("/save")
     ResponseEntity<Movie> saveMovie(@RequestBody Movie movie) {
-        return ResponseEntity.ok().body(service.save(movie));
+        Movie movieSaved=service.save(movie);
+        sender.send(movieSaved);
+        return ResponseEntity.ok().body(service.save(movieSaved));
     }
-
+/*
     @PostMapping("/salvar")
     public ResponseEntity<?> saveMovieQueue(@RequestBody Movie movie) {
         sender.send(movie);
         return ResponseEntity.noContent().build();
     }
+
+ */
 
 }
