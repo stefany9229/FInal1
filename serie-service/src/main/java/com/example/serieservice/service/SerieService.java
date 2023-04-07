@@ -28,8 +28,9 @@ public class SerieService {
         return repository.findAllByGenre(genre);
     }
 
-    public String create(Serie serie) {
-        repository.save(serie);
-        return serie.getId();
+    public Serie create(Serie serie) {
+
+        Serie newSerie= repository.save(serie);
+        return newSerie;
     }
 }

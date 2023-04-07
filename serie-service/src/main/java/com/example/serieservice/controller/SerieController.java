@@ -3,6 +3,7 @@ package com.example.serieservice.controller;
 import com.example.serieservice.model.Serie;
 import com.example.serieservice.service.SerieService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,8 +33,9 @@ public class SerieController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public String create(@RequestBody Serie serie) {
+    public ResponseEntity<Serie> create(@RequestBody Serie serie) {
+        Serie newSerie=serieService.create(serie);
         serieService.create(serie);
-        return serie.getId();
+        return ResponseEntity.ok(newSerie);
     }
 }
