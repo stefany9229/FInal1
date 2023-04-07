@@ -2,6 +2,7 @@ package com.dh.movieservice.api.controller;
 
 import com.dh.movieservice.api.service.MovieService;
 import com.dh.movieservice.domain.model.Movie;
+import com.dh.movieservice.rabbitmq.queue.MovieSender;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,9 +18,12 @@ import java.util.List;
 public class MovieController {
 
     private final MovieService service;
+    private final MovieSender sender;
 
-    public MovieController(MovieService service) {
+
+    public MovieController(MovieService service, MovieSender sender) {
         this.service = service;
+        this.sender = sender;
     }
 
     @GetMapping("/{genre}")
@@ -31,4 +35,11 @@ public class MovieController {
     ResponseEntity<Movie> saveMovie(@RequestBody Movie movie) {
         return ResponseEntity.ok().body(service.save(movie));
     }
+
+    @PostMapping("/salvar")
+    public ResponseEntity<?> saveMovieQueue(@RequestBody Movie movie) {
+        sender.send(movie);
+        return ResponseEntity.noContent().build();
+    }
+
 }

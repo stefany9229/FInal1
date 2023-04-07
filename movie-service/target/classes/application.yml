@@ -40,3 +40,7 @@ eureka:
 
 
 message: hello from movie-service
+
+queue:
+  movie:
+    name: MovieQueue
