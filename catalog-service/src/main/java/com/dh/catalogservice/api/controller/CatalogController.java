@@ -62,12 +62,13 @@ public class CatalogController {
 
     @PostMapping("/create/movie")
     ResponseEntity<Movie> createMovie(@RequestBody Movie movie){
-        listener.receive(movie);
+        listener.receiveMovie(movie);
         return  ResponseEntity.ok(catalogService.createMovie(movie));
     }
 
     @PostMapping("/create/serie")
     ResponseEntity<Serie> createSerie(@RequestBody Serie serie){
+        listener.receiveSerie(serie);
         return  ResponseEntity.ok(catalogService.createSerie(serie));
     }
 

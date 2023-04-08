@@ -2,6 +2,7 @@ package com.dh.catalogservice.rabbitmq.queue;
 
 import com.dh.catalogservice.api.service.CatalogService;
 import com.dh.catalogservice.domain.model.Movie;
+import com.dh.catalogservice.domain.model.Serie;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
@@ -16,12 +17,22 @@ public class CatalogListener {
     }
 
     @RabbitListener(queues = {"${queue.movie.name}"})
-    public void receive(@Payload Movie movie) {
+    public void receiveMovie(@Payload Movie movie) {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         service.createMovie(movie);
+    }
+
+    @RabbitListener(queues = {"${queue.serie.name}"})
+    public void receiveSerie(@Payload Serie serie) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        service.createSerie(serie);
     }
 }

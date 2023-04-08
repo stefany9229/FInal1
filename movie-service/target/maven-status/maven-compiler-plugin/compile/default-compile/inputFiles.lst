@@ -4,4 +4,7 @@ C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FIna
 C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\movie-service\src\main\java\com\dh\movieservice\domain\repository\MovieRepository.java
 C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\movie-service\src\main\java\com\dh\movieservice\api\service\MovieService.java
 C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\movie-service\src\main\java\com\dh\movieservice\domain\model\Movie.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\movie-service\src\main\java\com\dh\movieservice\rabbitmq\queue\MovieSender.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\movie-service\src\main\java\com\dh\movieservice\rabbitmq\core\config\RabbitMQSenderConfig.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\movie-service\src\main\java\com\dh\movieservice\rabbitmq\core\config\RabbitTemplateConfig.java
 C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\movie-service\src\main\java\com\dh\movieservice\domain\data\DataLoader.java

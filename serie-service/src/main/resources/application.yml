@@ -5,7 +5,7 @@ spring:
   data:
     mongodb:
       database: test1
-      port: 27017
+      port: 27018
 
   application:
     name: serie-service
