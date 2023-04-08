@@ -37,7 +37,7 @@ resilience4j:
         allowHealthIndicatorToFail: false
         registerHealthIndicator: true
         slidingWindowType: TIME_BASED
-        minimumNumberOfCalls: 2
+        minimumNumberOfCalls: 1
         slidingWindowSize: 8
         waitDurationInOpenState: 15s
         permittedNumberOfCallsInHalfOpenState: 3
@@ -46,9 +46,14 @@ resilience4j:
   retry:
     instances:
       OnLine:
-        maxAttempts: 3
-        waitDuration: 1000
+        maxAttempts: 2
+        waitDuration: 100
         retryExceptions:
           - feign.FeignException$InternalServerError
 
+queue:
+  persona:
+    name: TestQueue
+
+message: persona up
 

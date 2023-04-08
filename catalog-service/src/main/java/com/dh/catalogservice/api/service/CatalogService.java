@@ -73,9 +73,13 @@ public class CatalogService implements ICatalogService {
         return productList;
     }
 
-    /*private List<IProduct> subsciptionFallbackMethod(CallNotPermittedException exception){
-        return  null;
-    }*/
 
+    public Movie createMovie(Movie movie){
+        return movieRepository.save(movie);
+    }
+
+    public Serie createSerie(Serie serie){
+        return serieRepository.save(serie);
+    }
 
 }

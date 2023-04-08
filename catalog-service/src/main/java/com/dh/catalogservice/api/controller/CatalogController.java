@@ -8,10 +8,7 @@ import com.dh.catalogservice.domain.model.Movie;
 import com.dh.catalogservice.domain.model.Serie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -57,6 +54,16 @@ public class CatalogController {
     ResponseEntity<List<IProduct>> getAllGenreOnline(@PathVariable String genre) {
 
         return ResponseEntity.ok().body(catalogService.listarPorGeneroOnLine(genre));
+    }
+
+    @PostMapping("/create/movie")
+    ResponseEntity<Movie> createMovie(@RequestBody Movie movie){
+        return  ResponseEntity.ok(catalogService.createMovie(movie));
+    }
+
+    @PostMapping("/create/serie")
+    ResponseEntity<Serie> createSerie(@RequestBody Serie serie){
+        return  ResponseEntity.ok(catalogService.createSerie(serie));
     }
 
 }
