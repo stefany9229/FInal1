@@ -52,8 +52,10 @@ resilience4j:
           - feign.FeignException$InternalServerError
 
 queue:
-  persona:
-    name: TestQueue
+  movie:
+    name: MovieQueue
+  serie:
+    name: SerieQueue
 
 message: persona up
 

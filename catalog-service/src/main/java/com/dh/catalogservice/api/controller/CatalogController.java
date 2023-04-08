@@ -6,6 +6,7 @@ import com.dh.catalogservice.api.service.CatalogService;
 import com.dh.catalogservice.domain.model.IProduct;
 import com.dh.catalogservice.domain.model.Movie;
 import com.dh.catalogservice.domain.model.Serie;
+import com.dh.catalogservice.rabbitmq.queue.CatalogListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +25,9 @@ public class CatalogController {
 
     @Autowired
     private CatalogService catalogService;
+
+    @Autowired
+    private CatalogListener listener;
 
 /*
     @GetMapping("/movies/{genre}")
@@ -58,6 +62,7 @@ public class CatalogController {
 
     @PostMapping("/create/movie")
     ResponseEntity<Movie> createMovie(@RequestBody Movie movie){
+        listener.receive(movie);
         return  ResponseEntity.ok(catalogService.createMovie(movie));
     }
 
