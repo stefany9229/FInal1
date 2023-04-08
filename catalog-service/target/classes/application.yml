@@ -38,7 +38,7 @@ resilience4j:
         registerHealthIndicator: true
         slidingWindowType: TIME_BASED
         minimumNumberOfCalls: 1
-        slidingWindowSize: 8
+        slidingWindowSize: 1
         waitDurationInOpenState: 15s
         permittedNumberOfCallsInHalfOpenState: 3
         automaticTransitionFromOpenToHalfOpenEnabled: true
@@ -46,8 +46,8 @@ resilience4j:
   retry:
     instances:
       OnLine:
-        maxAttempts: 2
-        waitDuration: 100
+        maxAttempts: 4
+        waitDuration: 1000
         retryExceptions:
           - feign.FeignException$InternalServerError
 
