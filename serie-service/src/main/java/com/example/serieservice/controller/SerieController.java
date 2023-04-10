@@ -34,7 +34,7 @@ public class SerieController {
         return serieService.getSeriesBygGenre(genre);
     }
 
-    @PostMapping("/series/save")
+    @PostMapping("/series")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Serie> create(@RequestBody Serie serie) {
         Serie newSerie=serieService.create(serie);
