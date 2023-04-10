@@ -1,8 +1,16 @@
-C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\Primer Parcial Backend\especializacion-backend-i-parcial\catalog-service\src\main\java\com\dh\catalogservice\api\service\ICatalogService.java
-C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\Primer Parcial Backend\especializacion-backend-i-parcial\catalog-service\src\main\java\com\dh\catalogservice\CatalogServiceApplication.java
-C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\Primer Parcial Backend\especializacion-backend-i-parcial\catalog-service\src\main\java\com\dh\catalogservice\api\service\CatalogService.java
-C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\Primer Parcial Backend\especializacion-backend-i-parcial\catalog-service\src\main\java\com\dh\catalogservice\AppConfig.java
-C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\Primer Parcial Backend\especializacion-backend-i-parcial\catalog-service\src\main\java\com\dh\catalogservice\api\controller\CatalogController.java
-C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\Primer Parcial Backend\especializacion-backend-i-parcial\catalog-service\src\main\java\com\dh\catalogservice\api\controller\TestController.java
-C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\Primer Parcial Backend\especializacion-backend-i-parcial\catalog-service\src\main\java\com\dh\catalogservice\domain\model\Movie.java
-C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\Primer Parcial Backend\especializacion-backend-i-parcial\catalog-service\src\main\java\com\dh\catalogservice\api\client\IMoviesServiceClient.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\api\service\CatalogService.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\api\repository\IMovieRepository.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\api\repository\ISerieRepository.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\api\service\ICatalogService.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\api\client\ISeriesServiceClient.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\rabbitmq\core\config\RabbitTemplateConfig.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\domain\model\IProduct.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\CatalogServiceApplication.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\api\controller\CatalogController.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\api\client\IMoviesServiceClient.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\api\controller\TestController.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\domain\model\Movie.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\AppConfig.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\domain\model\Serie.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\api\data\DataLoader.java
+C:\Users\Usuario\Desktop\Especializacion Backend\Backend 1\FinalBaseTercero\FInal1\catalog-service\src\main\java\com\dh\catalogservice\rabbitmq\queue\CatalogListener.java
