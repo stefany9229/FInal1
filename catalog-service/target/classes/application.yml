@@ -1,68 +1,7 @@
 spring:
   application:
     name: catalog-service
-  mongodb:
-    embedded:
-      version: 4.0.2
-  data:
-    mongodb:
-      database: catalogoDB
-      port: 27017
-  zipkin:
-    base-url: http://localhost:9411/
-    enabled: true
 
 
-
-
- #|    config:
-  #    import: "optional:configserver:http://localhost:8888/"
-
-
-server:
-  port: ${PORT:${SERVER_PORT:0}}
-  idRandom: ${random.value}
-
-eureka:
-  instance:
-    hostname: localhost
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
-
-resilience4j:
-  circuitbreaker:
-    instances:
-      OnLine:
-        allowHealthIndicatorToFail: false
-        registerHealthIndicator: true
-        slidingWindowType: TIME_BASED
-        minimumNumberOfCalls: 1
-        slidingWindowSize: 1
-        waitDurationInOpenState: 15s
-        permittedNumberOfCallsInHalfOpenState: 3
-        automaticTransitionFromOpenToHalfOpenEnabled: true
-        eventConsumerBufferSize: 1
-  retry:
-    instances:
-      OnLine:
-        maxAttempts: 4
-        waitDuration: 1000
-        retryExceptions:
-          - feign.FeignException$InternalServerError
-
-queue:
-  movie:
-    name: MovieQueue
-  serie:
-    name: SerieQueue
-
-message: persona up
-
-
-
-
+  config:
+    import: "optional:configserver:http://localhost:8888/"
