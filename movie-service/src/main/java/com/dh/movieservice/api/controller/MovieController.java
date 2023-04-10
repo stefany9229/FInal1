@@ -31,6 +31,11 @@ public class MovieController {
         return ResponseEntity.ok().body(service.findByGenre(genre));
     }
 
+    @GetMapping()
+    ResponseEntity<List<Movie>> getMovieAll() {
+        return ResponseEntity.ok().body((service.findAll()));
+    }
+
     @PostMapping("/save")
     ResponseEntity<Movie> saveMovie(@RequestBody Movie movie) {
         Movie movieSaved=service.save(movie);

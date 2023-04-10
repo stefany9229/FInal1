@@ -23,6 +23,10 @@ public class MovieService {
         return repository.findByGenre(genre);
     }
 
+    public List<Movie> findAll() {
+        return repository.findAll();
+    }
+
     public Movie save(Movie movie) {
         return repository.save(movie);
     }
